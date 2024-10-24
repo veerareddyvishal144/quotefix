@@ -8,6 +8,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
 
   const handleFileChange = (event) => {
+    console.log(event);
     setFile(event.target.files[0]);
   };
 
@@ -20,14 +21,15 @@ const Home = () => {
     formData.append('image', file);
 
     setLoading(true);
-
+debugger;
     try {
-      const response = await axios.post('https://api.example.com/upload', formData, {
+        console.log(formData);
+      const response = await axios.post('http://20.57.161.211/predict', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-
+      console.log(response);
       // Assuming the API response returns an array of objects with id, name, and cost
       setData(response.data); // Set the array of objects to display in the card view
     } catch (error) {
