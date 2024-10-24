@@ -16,18 +16,18 @@ const App = () => {
               React Image Upload
             </Typography>
             <Button color="inherit">
-              <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
+              <Link to="/quotefix/home" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
             </Button>
             <Button color="inherit">
-              <Link to="/about" style={{ color: 'white', textDecoration: 'none' }}>About</Link>
+              <Link to="/quotefix/about" style={{ color: 'white', textDecoration: 'none' }}>About</Link>
             </Button>
           </Toolbar>
         </AppBar>
 
         {/* Route Definitions */}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/quotefix/home" element={<Home />} />
+          <Route path="/quotefix/about" element={<About />} />
         </Routes>
       </Box>
     </Router>
